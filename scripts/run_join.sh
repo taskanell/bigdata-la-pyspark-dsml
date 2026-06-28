@@ -34,8 +34,8 @@ Strategies tested:
   Q4 (cross join):       broadcast  shuffle_replicate_nl
 
 Results are written to:
-  solution_logs/q3_join_results.log  — a Q3-only file
-  solution_logs/q4_join_results.log  — a Q4-only file
+  logs/q3_join_results.log  — a Q3-only file
+  logs/q4_join_results.log  — a Q4-only file
   (both files written when QUERY=both)
 EOF
     exit 0
@@ -51,7 +51,7 @@ RUNS=${2:-3}
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"
 
-LOG_DIR="$(dirname "$0")/../solution_logs"
+LOG_DIR="$(dirname "$0")/../logs"
 LOG_FILE=""  # set per query in run_query()
 
 # Q3: equi-join — all four hint strategies produce distinct physical plans
@@ -131,7 +131,8 @@ run_strategy() {
         i=$((i + 1))
     done
 
-    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n '2p')
+    mid=$(( (${#times[@]} + 1) / 2 ))
+    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n "${mid}p")
     echo "  >>> Median: ${median}s" | tee -a "$LOG_FILE"
     echo "Q${qnum} $strategy MEDIAN=$median" >> "$LOG_FILE"
 }

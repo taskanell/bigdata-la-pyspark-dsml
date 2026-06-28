@@ -2,8 +2,8 @@
 
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"
-LOG_FILE="$(dirname "$0")/../solution_logs/q1_results.log"
 RUNS=${1:-3}
+LOG_FILE="$(dirname "$0")/../logs/q1_results.log"
 SUBMIT_ARGS="--conf spark.pyspark.python=python3 \
   --conf spark.pyspark.driver.python=python3 \
   --conf spark.executor.instances=2 \
@@ -11,9 +11,11 @@ SUBMIT_ARGS="--conf spark.pyspark.python=python3 \
   --conf spark.executor.memory=2g"
 
 # Submits one job, waits for it, logs output, prints elapsed seconds
+# $1: script path   $2: extra spark-submit args (optional)
 run_once() {
     local script=$1
-    SUBMIT_OUT=$(spark-submit $SUBMIT_ARGS "$script" --base-path "$BASE_PATH" 2>&1)
+    local extra_args=$2
+    SUBMIT_OUT=$(spark-submit $SUBMIT_ARGS "$script" --base-path "$BASE_PATH" $extra_args 2>&1)
     SUBMISSION_ID=$(echo "$SUBMIT_OUT" | grep "submission ID" | grep -o 'submission ID [^ ]*' | awk '{print $3}')
     POD_NAME="${SUBMISSION_ID#*:}"
 
@@ -42,9 +44,11 @@ run_once() {
 }
 
 # Runs a script RUNS times, collects elapsed times, computes median
+# $1: script path   $2: label   $3: extra spark-submit args (optional)
 run_job() {
     local script=$1
     local label=$2
+    local extra_args=$3
     echo "" | tee -a "$LOG_FILE"
     echo "========== $label ==========" | tee -a "$LOG_FILE"
 
@@ -52,7 +56,7 @@ run_job() {
     local i=1
     while [[ ${#times[@]} -lt $RUNS ]]; do
         echo "--- Run $i/$RUNS ---" | tee -a "$LOG_FILE"
-        elapsed=$(run_once "$script")
+        elapsed=$(run_once "$script" "$extra_args")
         if [[ $? -ne 0 || -z "$elapsed" ]]; then
             echo "  Run failed, retrying after VPN reconnect..." | tee -a "$LOG_FILE" >&2
             echo "  Reconnect VPN now, then press Enter to retry." >&2
@@ -64,15 +68,17 @@ run_job() {
         i=$((i + 1))
     done
 
-    # Sort the 3 values and pick the middle one
-    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n '2p')
+    # Sort the values and pick the middle one (works for any number of runs)
+    mid=$(( (${#times[@]} + 1) / 2 ))
+    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n "${mid}p")
     echo "  >>> Median: ${median}s" | tee -a "$LOG_FILE"
     echo "$label MEDIAN=$median" >> "$LOG_FILE"
 }
 
 > "$LOG_FILE"
 
-run_job solutions/DFQ1.py     "DataFrame no UDF"
+run_job solutions/DFQ1.py     "DataFrame no UDF - CSV"     "--format csv"
+run_job solutions/DFQ1.py     "DataFrame no UDF - Parquet" "--format parquet"
 run_job solutions/DFQ1_udf.py "DataFrame with UDF"
 run_job solutions/RddQ1.py    "RDD"
 

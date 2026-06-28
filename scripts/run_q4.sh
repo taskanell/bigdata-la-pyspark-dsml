@@ -16,7 +16,7 @@ SCRIPT="solutions/DFQ4.py"
 RUNS=${1:-3}
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"
-LOG_FILE="$(dirname "$0")/../solution_logs/q4_results.log"
+LOG_FILE="$(dirname "$0")/../logs/q4_results.log"
 
 # "instances cores memory label"
 CONFIGS=(
@@ -86,14 +86,14 @@ run_config() {
         i=$((i + 1))
     done
 
-    # Sort the values and pick the middle one
-    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n '2p')
+    # Sort the values and pick the middle one (works for any number of runs)
+    mid=$(( (${#times[@]} + 1) / 2 ))
+    median=$(printf '%s\n' "${times[@]}" | sort -n | sed -n "${mid}p")
     echo "  >>> Median: ${median}s" | tee -a "$LOG_FILE"
     echo "$label MEDIAN=$median" >> "$LOG_FILE"
 }
 
 > "$LOG_FILE"
-echo "Script: $SCRIPT" | tee -a "$LOG_FILE"
 
 for config in "${CONFIGS[@]}"; do
     read -r instances cores memory label <<< "$config"

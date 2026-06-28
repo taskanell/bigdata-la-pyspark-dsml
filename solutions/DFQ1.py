@@ -13,6 +13,7 @@ os.environ["PYSPARK_DRIVER_PYTHON"] = sys.executable
 
 CRIME_2010 = "hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv"
 CRIME_2020 = "hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2020_2025.csv"
+PARQUET_FILENAME = "LA_Crime_Data.parquet"
 
 
 def build_path(base_path: str, relative_path: str) -> str:
@@ -23,13 +24,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Query 1 - DataFrame no UDF")
     parser.add_argument("--base-path", required=True)
     parser.add_argument("--output")
+    parser.add_argument("--format", choices=["csv", "parquet"], default="csv")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
 
-    builder = SparkSession.builder.appName("DFQ1 - no UDF")
+    builder = SparkSession.builder.appName(f"DFQ1 - no UDF ({args.format})")
 
     spark = builder.getOrCreate()
     spark.sparkContext.setLogLevel("ERROR")
@@ -38,7 +40,11 @@ def main():
     if output_path is None and args.base_path:
         output_path = build_path(args.base_path, f"DFQ1_{spark.sparkContext.applicationId}")
 
-    crimes_df = spark.read.csv([CRIME_2010, CRIME_2020], header=True, inferSchema=False)
+    if args.format == "parquet":
+        crimes_df = spark.read.parquet(build_path(args.base_path, PARQUET_FILENAME))
+    else:
+        crimes_df = spark.read.csv([CRIME_2010, CRIME_2020], header=True, inferSchema=False)
+    print(f"\nSELECTED FORMAT: {args.format}\n")
 
     street_df = crimes_df.filter(col("Premis Desc") == "STREET")
 
