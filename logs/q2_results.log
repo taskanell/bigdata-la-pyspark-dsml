@@ -1,0 +1,335 @@
+
+========== DataFrame ==========
+--- Run 1/3 ---
+  Pod: dfq2-py-d257589ef62b1894-driver
+26/06/23 20:28:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/23 20:28:09 INFO SparkContext: Running Spark version 3.5.8
+26/06/23 20:28:09 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/23 20:28:09 INFO SparkContext: Java version 11.0.29
+26/06/23 20:28:09 INFO ResourceUtils: ==============================================================
+26/06/23 20:28:09 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/23 20:28:09 INFO ResourceUtils: ==============================================================
+26/06/23 20:28:09 INFO SparkContext: Submitted application: DFQ2
+26/06/23 20:28:09 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/23 20:28:09 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+26/06/23 20:28:09 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/23 20:28:09 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/23 20:28:09 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/23 20:28:09 INFO SecurityManager: Changing view acls groups to: 
+26/06/23 20:28:09 INFO SecurityManager: Changing modify acls groups to: 
+26/06/23 20:28:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/23 20:28:10 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/23 20:28:10 INFO SparkEnv: Registering MapOutputTracker
+26/06/23 20:28:10 INFO SparkEnv: Registering BlockManagerMaster
+26/06/23 20:28:10 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/23 20:28:10 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/23 20:28:10 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/23 20:28:10 INFO DiskBlockManager: Created local directory at /var/data/spark-cc13e587-7ac0-4f83-b8c3-b6cb8f4cacec/blockmgr-5f644df7-f5c5-4ff9-9da4-5e585ef39453
+26/06/23 20:28:10 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/23 20:28:10 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/23 20:28:10 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/23 20:28:10 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/23 20:28:10 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/23 20:28:12 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/23 20:28:12 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/23 20:28:12 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:28:12 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:28:12 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:28:12 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:28:12 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/23 20:28:12 INFO NettyBlockTransferService: Server created on dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc 10.233.126.115:7079
+26/06/23 20:28:12 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/23 20:28:12 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:28:13 INFO BlockManagerMasterEndpoint: Registering block manager dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:28:13 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:28:13 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq2-py-d257589ef62b1894-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:28:13 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-95c5042679c3454f98e0550ea2265da9.inprogress
+26/06/23 20:28:17 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.189:44434
+26/06/23 20:28:17 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.124.205:59492
+26/06/23 20:28:17 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.75:46050
+26/06/23 20:28:17 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.124.199:39630
+26/06/23 20:28:18 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.189:44438) with ID 2,  ResourceProfileId 0
+26/06/23 20:28:18 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.124.205:59504) with ID 1,  ResourceProfileId 0
+26/06/23 20:28:18 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.75:46064) with ID 3,  ResourceProfileId 0
+26/06/23 20:28:18 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.189:37861 with 1048.8 MiB RAM, BlockManagerId(2, 10.233.98.189, 37861, None)
+26/06/23 20:28:18 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.124.205:46631 with 1048.8 MiB RAM, BlockManagerId(1, 10.233.124.205, 46631, None)
+26/06/23 20:28:18 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.75:39097 with 1048.8 MiB RAM, BlockManagerId(3, 10.233.126.75, 39097, None)
+26/06/23 20:28:18 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.124.199:39646) with ID 4,  ResourceProfileId 0
+26/06/23 20:28:18 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/23 20:28:18 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.124.199:45661 with 1048.8 MiB RAM, BlockManagerId(4, 10.233.124.199, 45661, None)
++----+-----+-----------+-------+
+|year|month|crime_total|ranking|
++----+-----+-----------+-------+
+|2010|    1|      19524|      1|
+|2010|    3|      18131|      2|
+|2010|    7|      17857|      3|
+|2011|    1|      18144|      1|
+|2011|    7|      17284|      2|
+|2011|   10|      17035|      3|
+|2012|    1|      17958|      1|
+|2012|    8|      17662|      2|
+|2012|    5|      17504|      3|
+|2013|    8|      17442|      1|
+|2013|    1|      16833|      2|
+|2013|    7|      16645|      3|
+|2014|   10|      17337|      1|
+|2014|    7|      17260|      2|
+|2014|   12|      17201|      3|
+|2015|    8|      15044|      1|
+|2015|   10|      14934|      2|
+|2015|    7|      14852|      3|
+|2016|   12|      26236|      1|
+|2016|   10|      25008|      2|
+|2016|    8|      24635|      3|
+|2017|   10|      20442|      1|
+|2017|    7|      20202|      2|
+|2017|    1|      19866|      3|
+|2018|    5|      19979|      1|
+|2018|    7|      19882|      2|
+|2018|    8|      19769|      3|
+|2019|    7|      19132|      1|
+|2019|    8|      18994|      2|
+|2019|    3|      18877|      3|
+|2020|    1|      18576|      1|
+|2020|    2|      17284|      2|
+|2020|    5|      17230|      3|
+|2021|   10|      19343|      1|
+|2021|    7|      18690|      2|
+|2021|    8|      18398|      3|
+|2022|    5|      20467|      1|
+|2022|   10|      20335|      2|
+|2022|    6|      20273|      3|
+|2023|   10|      20122|      1|
+|2023|    8|      20082|      2|
+|2023|    1|      19970|      3|
+|2024|    1|      18926|      1|
+|2024|    2|      17394|      2|
+|2024|    3|      16293|      3|
+|2025|    2|         44|      1|
+|2025|    1|         26|      2|
+|2025|    3|         24|      3|
++----+-----+-----------+-------+
+
+QUERY_ELAPSED_SECONDS=93.449
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ2_spark-95c5042679c3454f98e0550ea2265da9
+  Elapsed: 93.449s
+--- Run 2/3 ---
+  ERROR: could not get pod name — VPN may have dropped. Skipping run.
+26/06/23 23:30:09 WARN Utils: Your hostname, tasoskanellos-Legion-Pro-7-16IAX10H resolves to a loopback address: 127.0.1.1; using 192.168.2.9 instead (on interface wlp130s0f0)
+26/06/23 23:30:09 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/06/23 23:30:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/23 23:30:09 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/23 23:30:10 INFO KerberosConfDriverFeatureStep: You have not specified a krb5.conf file locally or via a ConfigMap. Make sure that you have the krb5.conf locally on the driver image.
+26/06/23 23:30:10 WARN FileSystem: Failed to initialize fileystem hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/.spark-upload: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+Exception in thread "main" org.apache.spark.SparkException: Uploading file /home/tasoskanellos/Documents/dsml/2nd_semester/big_data/lab_session/bigdata-dsml/solutions/DFQ2.py failed...
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:327)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.renameMainAppResource(KubernetesUtils.scala:300)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configureForPython(DriverCommandFeatureStep.scala:102)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configurePod(DriverCommandFeatureStep.scala:44)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.$anonfun$buildFromFeatures$5(KubernetesDriverBuilder.scala:85)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.buildFromFeatures(KubernetesDriverBuilder.scala:84)
+	at org.apache.spark.deploy.k8s.submit.Client.run(KubernetesClientApplication.scala:104)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6(KubernetesClientApplication.scala:256)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6$adapted(KubernetesClientApplication.scala:250)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource(SparkErrorUtils.scala:48)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource$(SparkErrorUtils.scala:46)
+	at org.apache.spark.util.Utils$.tryWithResource(Utils.scala:94)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.run(KubernetesClientApplication.scala:250)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.start(KubernetesClientApplication.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1034)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:466)
+	at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:134)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:374)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:202)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:187)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.spark.util.Utils$.getHadoopFileSystem(Utils.scala:1831)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:318)
+	... 23 more
+Caused by: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	... 36 more
+26/06/23 23:30:10 INFO ShutdownHookManager: Shutdown hook called
+26/06/23 23:30:10 INFO ShutdownHookManager: Deleting directory /tmp/spark-3415f1d5-1ba5-47fb-8fb6-c6408f1f3376
+  Run failed, retrying after VPN reconnect...
+--- Run 2/3 ---
+  Pod: dfq2-py-ac46229ef6403a60-driver
+26/06/23 20:51:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/23 20:51:14 INFO SparkContext: Running Spark version 3.5.8
+26/06/23 20:51:14 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/23 20:51:14 INFO SparkContext: Java version 11.0.29
+26/06/23 20:51:14 INFO ResourceUtils: ==============================================================
+26/06/23 20:51:14 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/23 20:51:14 INFO ResourceUtils: ==============================================================
+26/06/23 20:51:14 INFO SparkContext: Submitted application: DFQ2
+26/06/23 20:51:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/23 20:51:15 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+26/06/23 20:51:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/23 20:51:15 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/23 20:51:15 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/23 20:51:15 INFO SecurityManager: Changing view acls groups to: 
+26/06/23 20:51:15 INFO SecurityManager: Changing modify acls groups to: 
+26/06/23 20:51:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/23 20:51:15 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/23 20:51:15 INFO SparkEnv: Registering MapOutputTracker
+26/06/23 20:51:15 INFO SparkEnv: Registering BlockManagerMaster
+26/06/23 20:51:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/23 20:51:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/23 20:51:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/23 20:51:15 INFO DiskBlockManager: Created local directory at /var/data/spark-b49d3093-544c-473a-9d4f-55b03f2b6fa4/blockmgr-0af6a87b-3a0f-4b81-934f-8042c9504f42
+26/06/23 20:51:15 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/23 20:51:15 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/23 20:51:15 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/23 20:51:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/23 20:51:16 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/23 20:51:17 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/23 20:51:18 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/23 20:51:18 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/23 20:51:18 INFO NettyBlockTransferService: Server created on dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc 10.233.126.67:7079
+26/06/23 20:51:18 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/23 20:51:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:51:18 INFO BlockManagerMasterEndpoint: Registering block manager dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:51:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:51:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq2-py-ac46229ef6403a60-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/23 20:51:18 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:51:18 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-f0b949aee5894aaa925fa8583c87ea1a.inprogress
+26/06/23 20:51:18 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:51:18 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:51:18 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.182:55994
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.105:54840
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.153:41516
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.110:60042
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.182:56002) with ID 1,  ResourceProfileId 0
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.105:54842) with ID 2,  ResourceProfileId 0
+26/06/23 20:51:23 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.182:32861 with 1048.8 MiB RAM, BlockManagerId(1, 10.233.98.182, 32861, None)
+26/06/23 20:51:23 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.105:39537 with 1048.8 MiB RAM, BlockManagerId(2, 10.233.126.105, 39537, None)
+26/06/23 20:51:23 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.153:57436) with ID 4,  ResourceProfileId 0
+26/06/23 20:51:24 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.110:60048) with ID 3,  ResourceProfileId 0
+26/06/23 20:51:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.153:43999 with 1048.8 MiB RAM, BlockManagerId(4, 10.233.101.153, 43999, None)
+26/06/23 20:51:24 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/23 20:51:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.110:33355 with 1048.8 MiB RAM, BlockManagerId(3, 10.233.126.110, 33355, None)
++----+-----+-----------+-------+
+|year|month|crime_total|ranking|
++----+-----+-----------+-------+
+|2010|    1|      19524|      1|
+|2010|    3|      18131|      2|
+|2010|    7|      17857|      3|
+|2011|    1|      18144|      1|
+|2011|    7|      17284|      2|
+|2011|   10|      17035|      3|
+|2012|    1|      17958|      1|
+|2012|    8|      17662|      2|
+|2012|    5|      17504|      3|
+|2013|    8|      17442|      1|
+|2013|    1|      16833|      2|
+|2013|    7|      16645|      3|
+|2014|   10|      17337|      1|
+|2014|    7|      17260|      2|
+|2014|   12|      17201|      3|
+|2015|    8|      15044|      1|
+|2015|   10|      14934|      2|
+|2015|    7|      14852|      3|
+|2016|   12|      26236|      1|
+|2016|   10|      25008|      2|
+|2016|    8|      24635|      3|
+|2017|   10|      20442|      1|
+|2017|    7|      20202|      2|
+|2017|    1|      19866|      3|
+|2018|    5|      19979|      1|
+|2018|    7|      19882|      2|
+|2018|    8|      19769|      3|
+|2019|    7|      19132|      1|
+|2019|    8|      18994|      2|
+|2019|    3|      18877|      3|
+|2020|    1|      18576|      1|
+|2020|    2|      17284|      2|
+|2020|    5|      17230|      3|
+|2021|   10|      19343|      1|
+|2021|    7|      18690|      2|
+|2021|    8|      18398|      3|
+|2022|    5|      20467|      1|
+|2022|   10|      20335|      2|
+|2022|    6|      20273|      3|
+|2023|   10|      20122|      1|
+|2023|    8|      20082|      2|
+|2023|    1|      19970|      3|
+|2024|    1|      18926|      1|
+|2024|    2|      17394|      2|
+|2024|    3|      16293|      3|
+|2025|    2|         44|      1|
+|2025|    1|         26|      2|
+|2025|    3|         24|      3|
++----+-----+-----------+-------+
+
+QUERY_ELAPSED_SECONDS=86.496
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ2_spark-f0b949aee5894aaa925fa8583c87ea1a
+  Elapsed: 86.496s
+--- Run 3/3 ---
+  ERROR: could not get pod name — VPN may have dropped. Skipping run.
+26/06/23 23:53:08 WARN Utils: Your hostname, tasoskanellos-Legion-Pro-7-16IAX10H resolves to a loopback address: 127.0.1.1; using 192.168.2.9 instead (on interface wlp130s0f0)
+26/06/23 23:53:08 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/06/23 23:53:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/23 23:53:08 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/23 23:53:09 INFO KerberosConfDriverFeatureStep: You have not specified a krb5.conf file locally or via a ConfigMap. Make sure that you have the krb5.conf locally on the driver image.
+26/06/23 23:53:09 WARN FileSystem: Failed to initialize fileystem hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/.spark-upload: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+Exception in thread "main" org.apache.spark.SparkException: Uploading file /home/tasoskanellos/Documents/dsml/2nd_semester/big_data/lab_session/bigdata-dsml/solutions/DFQ2.py failed...
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:327)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.renameMainAppResource(KubernetesUtils.scala:300)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configureForPython(DriverCommandFeatureStep.scala:102)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configurePod(DriverCommandFeatureStep.scala:44)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.$anonfun$buildFromFeatures$5(KubernetesDriverBuilder.scala:85)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.buildFromFeatures(KubernetesDriverBuilder.scala:84)
+	at org.apache.spark.deploy.k8s.submit.Client.run(KubernetesClientApplication.scala:104)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6(KubernetesClientApplication.scala:256)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6$adapted(KubernetesClientApplication.scala:250)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource(SparkErrorUtils.scala:48)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource$(SparkErrorUtils.scala:46)
+	at org.apache.spark.util.Utils$.tryWithResource(Utils.scala:94)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.run(KubernetesClientApplication.scala:250)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.start(KubernetesClientApplication.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1034)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:466)
+	at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:134)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:374)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:202)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:187)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.spark.util.Utils$.getHadoopFileSystem(Utils.scala:1831)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:318)
+	... 23 more
+Caused by: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	... 36 more
+26/06/23 23:53:09 INFO ShutdownHookManager: Shutdown hook called
+26/06/23 23:53:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-1af7e8fc-51de-46a8-a8ea-ea961c416168
+  Run failed, retrying after VPN reconnect...
+--- Run 3/3 ---
