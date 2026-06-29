@@ -17,10 +17,11 @@ All solution scripts live in [`solutions/`](solutions/).
 ## Layout
 
 ```
-solutions/   Spark jobs (DataFrame / SQL / RDD APIs)
-scripts/     spark-submit runners + benchmark orchestration
-logs/        benchmark output (one log per query)
-report.pdf   project report
+solutions/     Spark jobs (DataFrame / SQL / RDD APIs)
+scripts/       spark-submit runners + benchmark orchestration
+logs/          benchmark output (one log per query)
+report.pdf     project report
+LLM_USAGE.md   declaration of LLM tool usage per section
 ```
 
 ## Prerequisites
