@@ -1,4 +1,1378 @@
 
 ========== Q4 STRATEGY: broadcast ==========
 --- Run 1/3 ---
-  Pod: dfq4-py-6c5a8d9f0ec9663f-driver
+  Pod: dfq4-py-fd134a9f100c7966-driver
+26/06/28 21:04:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:04:48 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:04:48 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:04:48 INFO SparkContext: Java version 11.0.29
+26/06/28 21:04:48 INFO ResourceUtils: ==============================================================
+26/06/28 21:04:48 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:04:48 INFO ResourceUtils: ==============================================================
+26/06/28 21:04:48 INFO SparkContext: Submitted application: DFQ4_broadcast
+26/06/28 21:04:48 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:04:48 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:04:48 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:04:48 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:04:48 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:04:48 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:04:48 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:04:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:04:49 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:04:49 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:04:49 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:04:49 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:04:49 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:04:49 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:04:49 INFO DiskBlockManager: Created local directory at /var/data/spark-19682970-b6d8-4f7a-9582-250aa2743bc3/blockmgr-55521a41-f1ec-477f-9ab1-12d7e5774789
+26/06/28 21:04:49 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:04:49 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:04:49 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:04:49 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:04:49 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:04:51 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:04:52 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:04:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:04:52 INFO NettyBlockTransferService: Server created on dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc 10.233.126.117:7079
+26/06/28 21:04:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:04:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:04:52 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:04:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:04:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-fd134a9f100c7966-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:04:52 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:04:52 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-0780b1bdd99347918f3a1562b104f8c2.inprogress
+26/06/28 21:04:52 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:04:52 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:04:52 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:04:56 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.135:58864
+26/06/28 21:04:56 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.138:44732
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.103:37174
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.73:34486
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.135:58880) with ID 2,  ResourceProfileId 0
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.138:44734) with ID 4,  ResourceProfileId 0
+26/06/28 21:04:57 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.135:34495 with 2.2 GiB RAM, BlockManagerId(2, 10.233.98.135, 34495, None)
+26/06/28 21:04:57 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.138:40269 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.138, 40269, None)
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.103:37182) with ID 1,  ResourceProfileId 0
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.73:34502) with ID 3,  ResourceProfileId 0
+26/06/28 21:04:57 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:04:57 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.103:46323 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.103, 46323, None)
+26/06/28 21:04:58 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.73:35133 with 2.2 GiB RAM, BlockManagerId(3, 10.233.126.73, 35133, None)
+Physical plan (join strategy = broadcast): 
+== Physical Plan ==
+AdaptiveSparkPlan (20)
++- Sort (19)
+   +- Exchange (18)
+      +- HashAggregate (17)
+         +- Exchange (16)
+            +- HashAggregate (15)
+               +- Project (14)
+                  +- SortAggregate (13)
+                     +- Sort (12)
+                        +- Exchange (11)
+                           +- SortAggregate (10)
+                              +- Sort (9)
+                                 +- Project (8)
+                                    +- BroadcastNestedLoopJoin Inner BuildRight (7)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- BroadcastExchange (6)
+                                          +- Project (5)
+                                             +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) BroadcastExchange
+Input [3]: [division#108, st_lat#109, st_lon#110]
+Arguments: IdentityBroadcastMode, [plan_id=82]
+
+(7) BroadcastNestedLoopJoin
+Join type: Inner
+Join condition: None
+
+(8) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(9) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(11) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=89]
+
+(12) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(13) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(14) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(15) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(16) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=95]
+
+(17) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(18) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=98]
+
+(19) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(20) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=109.402
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_broadcast_spark-0780b1bdd99347918f3a1562b104f8c2
+  Elapsed: 109.402s
+--- Run 2/3 ---
+  ERROR: could not get pod name — VPN may have dropped.
+26/06/29 00:07:01 WARN Utils: Your hostname, tasoskanellos-Legion-Pro-7-16IAX10H resolves to a loopback address: 127.0.1.1; using 192.168.2.9 instead (on interface wlp130s0f0)
+26/06/29 00:07:01 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/06/29 00:07:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/29 00:07:02 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/29 00:07:02 INFO KerberosConfDriverFeatureStep: You have not specified a krb5.conf file locally or via a ConfigMap. Make sure that you have the krb5.conf locally on the driver image.
+26/06/29 00:07:02 WARN FileSystem: Failed to initialize fileystem hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/.spark-upload: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+Exception in thread "main" org.apache.spark.SparkException: Uploading file /home/tasoskanellos/Documents/dsml/2nd_semester/big_data/lab_session/bigdata-dsml/bigdata-la-pyspark/solutions/DFQ4.py failed...
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:327)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.renameMainAppResource(KubernetesUtils.scala:300)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configureForPython(DriverCommandFeatureStep.scala:102)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configurePod(DriverCommandFeatureStep.scala:44)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.$anonfun$buildFromFeatures$5(KubernetesDriverBuilder.scala:85)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.buildFromFeatures(KubernetesDriverBuilder.scala:84)
+	at org.apache.spark.deploy.k8s.submit.Client.run(KubernetesClientApplication.scala:104)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6(KubernetesClientApplication.scala:256)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6$adapted(KubernetesClientApplication.scala:250)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource(SparkErrorUtils.scala:48)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource$(SparkErrorUtils.scala:46)
+	at org.apache.spark.util.Utils$.tryWithResource(Utils.scala:94)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.run(KubernetesClientApplication.scala:250)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.start(KubernetesClientApplication.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1034)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:466)
+	at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:134)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:374)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:202)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:187)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.spark.util.Utils$.getHadoopFileSystem(Utils.scala:1831)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:318)
+	... 23 more
+Caused by: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	... 36 more
+26/06/29 00:07:02 INFO ShutdownHookManager: Shutdown hook called
+26/06/29 00:07:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-549adcfa-b32f-4340-b0db-9f6242e39065
+  Run failed — reconnect VPN then press Enter to retry.
+--- Run 2/3 ---
+  Pod: dfq4-py-971f789f100ec26b-driver
+26/06/28 21:07:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:07:18 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:07:18 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:07:18 INFO SparkContext: Java version 11.0.29
+26/06/28 21:07:18 INFO ResourceUtils: ==============================================================
+26/06/28 21:07:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:07:18 INFO ResourceUtils: ==============================================================
+26/06/28 21:07:18 INFO SparkContext: Submitted application: DFQ4_broadcast
+26/06/28 21:07:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:07:19 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:07:19 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:07:19 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:07:19 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:07:19 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:07:19 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:07:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:07:19 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:07:19 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:07:19 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:07:19 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:07:19 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:07:19 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:07:19 INFO DiskBlockManager: Created local directory at /var/data/spark-4dbf30ef-e426-4c87-b34b-113ecf859618/blockmgr-b0fc6e1e-0e9d-4677-a19f-152a22a82357
+26/06/28 21:07:19 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:07:19 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:07:19 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:07:20 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:07:20 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:07:22 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:07:22 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:07:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:07:22 INFO NettyBlockTransferService: Server created on dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc 10.233.126.121:7079
+26/06/28 21:07:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:07:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:07:22 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:07:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:07:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-971f789f100ec26b-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:07:22 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:07:22 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-56ed82afdaff47f9a6edb78bf50ddeb5.inprogress
+26/06/28 21:07:22 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:07:22 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:07:22 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.152:42338
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.186:34264
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.113:58000
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.106:40162
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.152:42340) with ID 4,  ResourceProfileId 0
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.186:34272) with ID 3,  ResourceProfileId 0
+26/06/28 21:07:27 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.186:44035 with 2.2 GiB RAM, BlockManagerId(3, 10.233.98.186, 44035, None)
+26/06/28 21:07:27 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.152:43451 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.152, 43451, None)
+26/06/28 21:07:27 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.113:58002) with ID 2,  ResourceProfileId 0
+26/06/28 21:07:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.106:40164) with ID 1,  ResourceProfileId 0
+26/06/28 21:07:28 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:07:28 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.113:37661 with 2.2 GiB RAM, BlockManagerId(2, 10.233.126.113, 37661, None)
+26/06/28 21:07:28 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.106:36019 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.106, 36019, None)
+Physical plan (join strategy = broadcast): 
+== Physical Plan ==
+AdaptiveSparkPlan (20)
++- Sort (19)
+   +- Exchange (18)
+      +- HashAggregate (17)
+         +- Exchange (16)
+            +- HashAggregate (15)
+               +- Project (14)
+                  +- SortAggregate (13)
+                     +- Sort (12)
+                        +- Exchange (11)
+                           +- SortAggregate (10)
+                              +- Sort (9)
+                                 +- Project (8)
+                                    +- BroadcastNestedLoopJoin Inner BuildRight (7)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- BroadcastExchange (6)
+                                          +- Project (5)
+                                             +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) BroadcastExchange
+Input [3]: [division#108, st_lat#109, st_lon#110]
+Arguments: IdentityBroadcastMode, [plan_id=82]
+
+(7) BroadcastNestedLoopJoin
+Join type: Inner
+Join condition: None
+
+(8) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(9) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(11) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=89]
+
+(12) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(13) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(14) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(15) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(16) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=95]
+
+(17) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(18) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=98]
+
+(19) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(20) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=100.868
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_broadcast_spark-56ed82afdaff47f9a6edb78bf50ddeb5
+  Elapsed: 100.868s
+--- Run 3/3 ---
+  ERROR: could not get pod name — VPN may have dropped.
+26/06/29 00:09:28 WARN Utils: Your hostname, tasoskanellos-Legion-Pro-7-16IAX10H resolves to a loopback address: 127.0.1.1; using 192.168.2.9 instead (on interface wlp130s0f0)
+26/06/29 00:09:28 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/06/29 00:09:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/29 00:09:28 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/29 00:09:29 INFO KerberosConfDriverFeatureStep: You have not specified a krb5.conf file locally or via a ConfigMap. Make sure that you have the krb5.conf locally on the driver image.
+26/06/29 00:09:29 WARN FileSystem: Failed to initialize fileystem hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/.spark-upload: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+Exception in thread "main" org.apache.spark.SparkException: Uploading file /home/tasoskanellos/Documents/dsml/2nd_semester/big_data/lab_session/bigdata-dsml/bigdata-la-pyspark/solutions/DFQ4.py failed...
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:327)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.renameMainAppResource(KubernetesUtils.scala:300)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configureForPython(DriverCommandFeatureStep.scala:102)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configurePod(DriverCommandFeatureStep.scala:44)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.$anonfun$buildFromFeatures$5(KubernetesDriverBuilder.scala:85)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.buildFromFeatures(KubernetesDriverBuilder.scala:84)
+	at org.apache.spark.deploy.k8s.submit.Client.run(KubernetesClientApplication.scala:104)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6(KubernetesClientApplication.scala:256)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6$adapted(KubernetesClientApplication.scala:250)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource(SparkErrorUtils.scala:48)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource$(SparkErrorUtils.scala:46)
+	at org.apache.spark.util.Utils$.tryWithResource(Utils.scala:94)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.run(KubernetesClientApplication.scala:250)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.start(KubernetesClientApplication.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1034)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:466)
+	at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:134)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:374)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:202)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:187)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.spark.util.Utils$.getHadoopFileSystem(Utils.scala:1831)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:318)
+	... 23 more
+Caused by: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	... 36 more
+26/06/29 00:09:29 INFO ShutdownHookManager: Shutdown hook called
+26/06/29 00:09:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-451d000d-ea2e-4c32-a478-fc695b293b5d
+  Run failed — reconnect VPN then press Enter to retry.
+--- Run 3/3 ---
+  Pod: dfq4-py-57b9959f1011869c-driver
+26/06/28 21:10:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:10:20 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:10:20 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:10:20 INFO SparkContext: Java version 11.0.29
+26/06/28 21:10:20 INFO ResourceUtils: ==============================================================
+26/06/28 21:10:20 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:10:20 INFO ResourceUtils: ==============================================================
+26/06/28 21:10:20 INFO SparkContext: Submitted application: DFQ4_broadcast
+26/06/28 21:10:20 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:10:20 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:10:20 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:10:20 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:10:20 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:10:20 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:10:20 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:10:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:10:20 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:10:20 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:10:20 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:10:20 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:10:20 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:10:20 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:10:20 INFO DiskBlockManager: Created local directory at /var/data/spark-055dab13-da0b-4811-8f5d-c1b5efc02c92/blockmgr-68cb77ec-9617-44e2-9cad-07a6999d18a0
+26/06/28 21:10:20 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:10:20 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:10:21 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:10:21 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:10:21 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:10:23 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:10:23 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:10:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:10:23 INFO NettyBlockTransferService: Server created on dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc 10.233.126.118:7079
+26/06/28 21:10:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:10:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:10:23 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:10:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:10:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-57b9959f1011869c-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:10:23 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:10:23 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:10:23 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-367b5ee28e654f6e8ed38abb0f996afa.inprogress
+26/06/28 21:10:23 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:10:23 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.162:36004
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.163:48418
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.111:41624
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.92:39362
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.162:36016) with ID 3,  ResourceProfileId 0
+26/06/28 21:10:28 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.163:48430) with ID 4,  ResourceProfileId 0
+26/06/28 21:10:29 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.162:36357 with 2.2 GiB RAM, BlockManagerId(3, 10.233.98.162, 36357, None)
+26/06/28 21:10:29 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.163:39187 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.163, 39187, None)
+26/06/28 21:10:29 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.111:41626) with ID 1,  ResourceProfileId 0
+26/06/28 21:10:29 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.111:38337 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.111, 38337, None)
+26/06/28 21:10:29 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.92:39374) with ID 2,  ResourceProfileId 0
+26/06/28 21:10:29 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:10:29 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.92:39051 with 2.2 GiB RAM, BlockManagerId(2, 10.233.126.92, 39051, None)
+Physical plan (join strategy = broadcast): 
+== Physical Plan ==
+AdaptiveSparkPlan (20)
++- Sort (19)
+   +- Exchange (18)
+      +- HashAggregate (17)
+         +- Exchange (16)
+            +- HashAggregate (15)
+               +- Project (14)
+                  +- SortAggregate (13)
+                     +- Sort (12)
+                        +- Exchange (11)
+                           +- SortAggregate (10)
+                              +- Sort (9)
+                                 +- Project (8)
+                                    +- BroadcastNestedLoopJoin Inner BuildRight (7)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- BroadcastExchange (6)
+                                          +- Project (5)
+                                             +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) BroadcastExchange
+Input [3]: [division#108, st_lat#109, st_lon#110]
+Arguments: IdentityBroadcastMode, [plan_id=82]
+
+(7) BroadcastNestedLoopJoin
+Join type: Inner
+Join condition: None
+
+(8) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(9) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(10) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(11) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=89]
+
+(12) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(13) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(14) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(15) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(16) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=95]
+
+(17) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(18) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=98]
+
+(19) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(20) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=80.963
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_broadcast_spark-367b5ee28e654f6e8ed38abb0f996afa
+  Elapsed: 80.963s
+  >>> Median: 100.868s
+Q4 broadcast MEDIAN=100.868
+
+========== Q4 STRATEGY: shuffle_replicate_nl ==========
+--- Run 1/3 ---
+  ERROR: could not get pod name — VPN may have dropped.
+26/06/29 00:12:12 WARN Utils: Your hostname, tasoskanellos-Legion-Pro-7-16IAX10H resolves to a loopback address: 127.0.1.1; using 192.168.2.9 instead (on interface wlp130s0f0)
+26/06/29 00:12:12 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/06/29 00:12:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/29 00:12:12 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/29 00:12:13 INFO KerberosConfDriverFeatureStep: You have not specified a krb5.conf file locally or via a ConfigMap. Make sure that you have the krb5.conf locally on the driver image.
+26/06/29 00:12:13 WARN FileSystem: Failed to initialize fileystem hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/.spark-upload: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+Exception in thread "main" org.apache.spark.SparkException: Uploading file /home/tasoskanellos/Documents/dsml/2nd_semester/big_data/lab_session/bigdata-dsml/bigdata-la-pyspark/solutions/DFQ4.py failed...
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:327)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.renameMainAppResource(KubernetesUtils.scala:300)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configureForPython(DriverCommandFeatureStep.scala:102)
+	at org.apache.spark.deploy.k8s.features.DriverCommandFeatureStep.configurePod(DriverCommandFeatureStep.scala:44)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.$anonfun$buildFromFeatures$5(KubernetesDriverBuilder.scala:85)
+	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:126)
+	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:122)
+	at scala.collection.immutable.List.foldLeft(List.scala:91)
+	at org.apache.spark.deploy.k8s.submit.KubernetesDriverBuilder.buildFromFeatures(KubernetesDriverBuilder.scala:84)
+	at org.apache.spark.deploy.k8s.submit.Client.run(KubernetesClientApplication.scala:104)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6(KubernetesClientApplication.scala:256)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.$anonfun$run$6$adapted(KubernetesClientApplication.scala:250)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource(SparkErrorUtils.scala:48)
+	at org.apache.spark.util.SparkErrorUtils.tryWithResource$(SparkErrorUtils.scala:46)
+	at org.apache.spark.util.Utils$.tryWithResource(Utils.scala:94)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.run(KubernetesClientApplication.scala:250)
+	at org.apache.spark.deploy.k8s.submit.KubernetesClientApplication.start(KubernetesClientApplication.scala:223)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:1034)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:199)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:222)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1125)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1134)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.lang.IllegalArgumentException: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	at org.apache.hadoop.security.SecurityUtil.buildTokenService(SecurityUtil.java:466)
+	at org.apache.hadoop.hdfs.NameNodeProxiesClient.createProxyWithClientProtocol(NameNodeProxiesClient.java:134)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:374)
+	at org.apache.hadoop.hdfs.DFSClient.<init>(DFSClient.java:308)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initDFSClient(DistributedFileSystem.java:202)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.initialize(DistributedFileSystem.java:187)
+	at org.apache.hadoop.fs.FileSystem.createFileSystem(FileSystem.java:3469)
+	at org.apache.hadoop.fs.FileSystem.access$300(FileSystem.java:174)
+	at org.apache.hadoop.fs.FileSystem$Cache.getInternal(FileSystem.java:3574)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:3521)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:540)
+	at org.apache.spark.util.Utils$.getHadoopFileSystem(Utils.scala:1831)
+	at org.apache.spark.deploy.k8s.KubernetesUtils$.uploadFileUri(KubernetesUtils.scala:318)
+	... 23 more
+Caused by: java.net.UnknownHostException: hdfs-namenode.default.svc.cluster.local
+	... 36 more
+26/06/29 00:12:13 INFO ShutdownHookManager: Shutdown hook called
+26/06/29 00:12:13 INFO ShutdownHookManager: Deleting directory /tmp/spark-d477c3de-4922-4758-8cc1-b15d776da46a
+  Run failed — reconnect VPN then press Enter to retry.
+--- Run 1/3 ---
+  Pod: dfq4-py-247ed39f101385f8-driver
+26/06/28 21:12:28 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:12:30 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:12:30 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:12:30 INFO SparkContext: Java version 11.0.29
+26/06/28 21:12:30 INFO ResourceUtils: ==============================================================
+26/06/28 21:12:30 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:12:30 INFO ResourceUtils: ==============================================================
+26/06/28 21:12:30 INFO SparkContext: Submitted application: DFQ4_shuffle_replicate_nl
+26/06/28 21:12:30 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:12:31 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:12:31 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:12:31 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:12:31 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:12:31 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:12:31 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:12:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:12:31 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:12:31 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:12:31 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:12:31 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:12:31 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:12:31 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:12:31 INFO DiskBlockManager: Created local directory at /var/data/spark-eb193407-2570-4653-91e8-64ae81af99bb/blockmgr-7343bf51-e9e7-44c0-87a7-8a3ae88c89f4
+26/06/28 21:12:31 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:12:31 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:12:31 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:12:31 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:12:32 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:12:34 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:12:34 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:12:34 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:12:34 INFO NettyBlockTransferService: Server created on dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc 10.233.126.66:7079
+26/06/28 21:12:34 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:12:34 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:12:34 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:12:34 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:12:34 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-247ed39f101385f8-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:12:34 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:12:34 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:12:34 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-6373fc7e8d12429296108832e94eb858.inprogress
+26/06/28 21:12:34 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:12:34 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:12:38 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.152:40714
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.145:38256
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.78:47558
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.125:43498
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.152:40718) with ID 2,  ResourceProfileId 0
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.145:38270) with ID 4,  ResourceProfileId 0
+26/06/28 21:12:39 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.152:43537 with 2.2 GiB RAM, BlockManagerId(2, 10.233.98.152, 43537, None)
+26/06/28 21:12:39 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.145:46089 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.145, 46089, None)
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.125:53158) with ID 1,  ResourceProfileId 0
+26/06/28 21:12:39 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.78:32866) with ID 3,  ResourceProfileId 0
+26/06/28 21:12:40 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:12:40 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.125:42035 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.125, 42035, None)
+26/06/28 21:12:40 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.78:39813 with 2.2 GiB RAM, BlockManagerId(3, 10.233.126.78, 39813, None)
+Physical plan (join strategy = shuffle_replicate_nl): 
+== Physical Plan ==
+AdaptiveSparkPlan (19)
++- Sort (18)
+   +- Exchange (17)
+      +- HashAggregate (16)
+         +- Exchange (15)
+            +- HashAggregate (14)
+               +- Project (13)
+                  +- SortAggregate (12)
+                     +- Sort (11)
+                        +- Exchange (10)
+                           +- SortAggregate (9)
+                              +- Sort (8)
+                                 +- Project (7)
+                                    +- CartesianProduct Inner (6)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- Project (5)
+                                          +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) CartesianProduct
+Join type: Inner
+Join condition: None
+
+(7) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(8) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(9) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(10) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=85]
+
+(11) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(12) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(13) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(14) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(15) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=91]
+
+(16) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(17) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=94]
+
+(18) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(19) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=112.977
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_shuffle_replicate_nl_spark-6373fc7e8d12429296108832e94eb858
+  Elapsed: 112.977s
+--- Run 2/3 ---
+  Pod: dfq4-py-3bf6ee9f1015c2ae-driver
+26/06/28 21:14:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:14:57 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:14:57 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:14:57 INFO SparkContext: Java version 11.0.29
+26/06/28 21:14:57 INFO ResourceUtils: ==============================================================
+26/06/28 21:14:57 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:14:57 INFO ResourceUtils: ==============================================================
+26/06/28 21:14:57 INFO SparkContext: Submitted application: DFQ4_shuffle_replicate_nl
+26/06/28 21:14:57 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:14:57 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:14:57 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:14:57 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:14:57 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:14:57 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:14:57 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:14:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:14:58 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:14:58 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:14:58 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:14:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:14:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:14:58 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:14:58 INFO DiskBlockManager: Created local directory at /var/data/spark-0deb595a-4415-41dd-a47b-8941926b8fc4/blockmgr-b7ee910f-5a99-43ea-9a94-eea79f157249
+26/06/28 21:14:58 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:14:58 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:14:58 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:14:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:14:58 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:15:00 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:15:01 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:15:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:15:01 INFO NettyBlockTransferService: Server created on dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc 10.233.126.99:7079
+26/06/28 21:15:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:15:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:15:01 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:15:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:15:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-3bf6ee9f1015c2ae-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:15:01 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:15:01 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:15:01 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-5098a79294bb40c2833a10a741345969.inprogress
+26/06/28 21:15:01 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:15:01 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:15:05 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.148:41750
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.171:53920
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.110:42282
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.94:53306
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.148:41764) with ID 2,  ResourceProfileId 0
+26/06/28 21:15:06 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.148:36543 with 2.2 GiB RAM, BlockManagerId(2, 10.233.98.148, 36543, None)
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.171:53934) with ID 4,  ResourceProfileId 0
+26/06/28 21:15:06 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.110:42296) with ID 1,  ResourceProfileId 0
+26/06/28 21:15:06 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.171:42483 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.171, 42483, None)
+26/06/28 21:15:06 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.110:46703 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.110, 46703, None)
+26/06/28 21:15:07 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.94:53320) with ID 3,  ResourceProfileId 0
+26/06/28 21:15:07 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:15:07 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.94:45023 with 2.2 GiB RAM, BlockManagerId(3, 10.233.126.94, 45023, None)
+Physical plan (join strategy = shuffle_replicate_nl): 
+== Physical Plan ==
+AdaptiveSparkPlan (19)
++- Sort (18)
+   +- Exchange (17)
+      +- HashAggregate (16)
+         +- Exchange (15)
+            +- HashAggregate (14)
+               +- Project (13)
+                  +- SortAggregate (12)
+                     +- Sort (11)
+                        +- Exchange (10)
+                           +- SortAggregate (9)
+                              +- Sort (8)
+                                 +- Project (7)
+                                    +- CartesianProduct Inner (6)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- Project (5)
+                                          +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) CartesianProduct
+Join type: Inner
+Join condition: None
+
+(7) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(8) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(9) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(10) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=85]
+
+(11) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(12) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(13) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(14) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(15) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=91]
+
+(16) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(17) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=94]
+
+(18) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(19) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=76.836
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_shuffle_replicate_nl_spark-5098a79294bb40c2833a10a741345969
+  Elapsed: 76.836s
+--- Run 3/3 ---
+  Pod: dfq4-py-be4b6b9f101788c7-driver
+26/06/28 21:16:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/06/28 21:16:53 INFO SparkContext: Running Spark version 3.5.8
+26/06/28 21:16:53 INFO SparkContext: OS info Linux, 6.1.0-48-amd64, amd64
+26/06/28 21:16:53 INFO SparkContext: Java version 11.0.29
+26/06/28 21:16:53 INFO ResourceUtils: ==============================================================
+26/06/28 21:16:53 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/06/28 21:16:53 INFO ResourceUtils: ==============================================================
+26/06/28 21:16:53 INFO SparkContext: Submitted application: DFQ4_shuffle_replicate_nl
+26/06/28 21:16:53 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 4096, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/06/28 21:16:53 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+26/06/28 21:16:53 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/06/28 21:16:54 INFO SecurityManager: Changing view acls to: spark,anastasioskanellos
+26/06/28 21:16:54 INFO SecurityManager: Changing modify acls to: spark,anastasioskanellos
+26/06/28 21:16:54 INFO SecurityManager: Changing view acls groups to: 
+26/06/28 21:16:54 INFO SecurityManager: Changing modify acls groups to: 
+26/06/28 21:16:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark, anastasioskanellos; groups with view permissions: EMPTY; users with modify permissions: spark, anastasioskanellos; groups with modify permissions: EMPTY
+26/06/28 21:16:54 INFO Utils: Successfully started service 'sparkDriver' on port 7078.
+26/06/28 21:16:54 INFO SparkEnv: Registering MapOutputTracker
+26/06/28 21:16:54 INFO SparkEnv: Registering BlockManagerMaster
+26/06/28 21:16:54 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/06/28 21:16:54 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/06/28 21:16:54 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/06/28 21:16:54 INFO DiskBlockManager: Created local directory at /var/data/spark-c12a08d2-5484-4240-88b4-aa60978fa5d6/blockmgr-79a5233e-af31-4eb0-ae27-c1ca7b66c7b1
+26/06/28 21:16:54 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+26/06/28 21:16:54 INFO SparkEnv: Registering OutputCommitCoordinator
+26/06/28 21:16:54 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/06/28 21:16:54 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/06/28 21:16:55 INFO SparkKubernetesClientFactory: Auto-configuring K8S client using current context from users K8S config file
+26/06/28 21:16:56 INFO ExecutorPodsAllocator: Going to request 4 executors from Kubernetes for ResourceProfile Id: 0, target: 4, known: 0, sharedSlotFromPendingPods: 2147483647.
+26/06/28 21:16:57 INFO ExecutorPodsAllocator: Found 0 reusable PVCs from 0 PVCs
+26/06/28 21:16:57 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079.
+26/06/28 21:16:57 INFO NettyBlockTransferService: Server created on dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc 10.233.126.75:7079
+26/06/28 21:16:57 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/06/28 21:16:57 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:16:57 INFO BlockManagerMasterEndpoint: Registering block manager dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc:7079 with 413.9 MiB RAM, BlockManagerId(driver, dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:16:57 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:16:57 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, dfq4-py-be4b6b9f101788c7-driver-svc.anastasioskanellos-priv.svc, 7079, None)
+26/06/28 21:16:57 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:16:57 INFO SingleEventLogFileWriter: Logging events to hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/logs/spark-8653791caae345d98e95ac868a9aecba.inprogress
+26/06/28 21:16:57 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:16:57 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:16:57 INFO BasicExecutorFeatureStep: Decommissioning not enabled, skipping shutdown script
+26/06/28 21:17:01 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.98.169:57684
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.101.180:41806
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.88:48884
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: No executor found for 10.233.126.115:34342
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.98.169:57692) with ID 3,  ResourceProfileId 0
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.101.180:41812) with ID 4,  ResourceProfileId 0
+26/06/28 21:17:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.101.180:46851 with 2.2 GiB RAM, BlockManagerId(4, 10.233.101.180, 46851, None)
+26/06/28 21:17:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.98.169:44829 with 2.2 GiB RAM, BlockManagerId(3, 10.233.98.169, 44829, None)
+26/06/28 21:17:02 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.88:48898) with ID 1,  ResourceProfileId 0
+26/06/28 21:17:03 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.88:41595 with 2.2 GiB RAM, BlockManagerId(1, 10.233.126.88, 41595, None)
+26/06/28 21:17:03 INFO KubernetesClusterSchedulerBackend$KubernetesDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.233.126.115:34356) with ID 2,  ResourceProfileId 0
+26/06/28 21:17:03 INFO KubernetesClusterSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+26/06/28 21:17:03 INFO BlockManagerMasterEndpoint: Registering block manager 10.233.126.115:33731 with 2.2 GiB RAM, BlockManagerId(2, 10.233.126.115, 33731, None)
+Physical plan (join strategy = shuffle_replicate_nl): 
+== Physical Plan ==
+AdaptiveSparkPlan (19)
++- Sort (18)
+   +- Exchange (17)
+      +- HashAggregate (16)
+         +- Exchange (15)
+            +- HashAggregate (14)
+               +- Project (13)
+                  +- SortAggregate (12)
+                     +- Sort (11)
+                        +- Exchange (10)
+                           +- SortAggregate (9)
+                              +- Sort (8)
+                                 +- Project (7)
+                                    +- CartesianProduct Inner (6)
+                                       :- Project (3)
+                                       :  +- Filter (2)
+                                       :     +- Scan csv  (1)
+                                       +- Project (5)
+                                          +- Scan csv  (4)
+
+
+(1) Scan csv 
+Output [3]: [DR_NO#17, LAT#43, LON#44]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Crime_Data/LA_Crime_Data_2010_2019.csv, ... 1 entries]
+PushedFilters: [IsNotNull(LAT), IsNotNull(LON)]
+ReadSchema: struct<DR_NO:string,LAT:string,LON:string>
+
+(2) Filter
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+Condition : ((((isnotnull(LAT#43) AND isnotnull(LON#44)) AND isnotnull(cast(LAT#43 as double))) AND isnotnull(cast(LON#44 as double))) AND (NOT (cast(LAT#43 as double) = 0.0) OR NOT (cast(LON#44 as double) = 0.0)))
+
+(3) Project
+Output [3]: [DR_NO#17, cast(LAT#43 as double) AS LAT#73, cast(LON#44 as double) AS LON#74]
+Input [3]: [DR_NO#17, LAT#43, LON#44]
+
+(4) Scan csv 
+Output [3]: [X#96, Y#97, DIVISION#99]
+Batched: false
+Location: InMemoryFileIndex [hdfs://hdfs-namenode.default.svc.cluster.local:9000/data/LA_Police_Stations.csv]
+ReadSchema: struct<X:string,Y:string,DIVISION:string>
+
+(5) Project
+Output [3]: [DIVISION#99 AS division#108, cast(Y#97 as double) AS st_lat#109, cast(X#96 as double) AS st_lon#110]
+Input [3]: [X#96, Y#97, DIVISION#99]
+
+(6) CartesianProduct
+Join type: Inner
+Join condition: None
+
+(7) Project
+Output [3]: [DR_NO#17, division#108, (6371.0 * (ATAN2(SQRT((POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))), SQRT((1.0 - (POWER(SIN((RADIANS((st_lat#109 - LAT#73)) / 2.0)), 2.0) + ((COS(RADIANS(LAT#73)) * COS(RADIANS(st_lat#109))) * POWER(SIN((RADIANS((st_lon#110 - LON#74)) / 2.0)), 2.0)))))) * 2.0)) AS distance_km#121]
+Input [6]: [DR_NO#17, LAT#73, LON#74, division#108, st_lat#109, st_lon#110]
+
+(8) Sort
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(9) SortAggregate
+Input [3]: [DR_NO#17, division#108, distance_km#121]
+Keys [1]: [DR_NO#17]
+Functions [1]: [partial_min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min#161]
+Results [2]: [DR_NO#17, min#162]
+
+(10) Exchange
+Input [2]: [DR_NO#17, min#162]
+Arguments: hashpartitioning(DR_NO#17, 200), ENSURE_REQUIREMENTS, [plan_id=85]
+
+(11) Sort
+Input [2]: [DR_NO#17, min#162]
+Arguments: [DR_NO#17 ASC NULLS FIRST], false, 0
+
+(12) SortAggregate
+Input [2]: [DR_NO#17, min#162]
+Keys [1]: [DR_NO#17]
+Functions [1]: [min(struct(distance_km, distance_km#121, division, division#108))]
+Aggregate Attributes [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136]
+Results [1]: [min(struct(distance_km, distance_km#121, division, division#108))#136 AS min_dist_pair#137]
+
+(13) Project
+Output [2]: [min_dist_pair#137.division AS division#140, min_dist_pair#137.distance_km AS distance_km#141]
+Input [1]: [min_dist_pair#137]
+
+(14) HashAggregate
+Input [2]: [division#140, distance_km#141]
+Keys [1]: [division#140]
+Functions [2]: [partial_avg(distance_km#141), partial_count(1)]
+Aggregate Attributes [3]: [sum#155, count#156L, count#157L]
+Results [4]: [division#140, sum#158, count#159L, count#160L]
+
+(15) Exchange
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Arguments: hashpartitioning(division#140, 200), ENSURE_REQUIREMENTS, [plan_id=91]
+
+(16) HashAggregate
+Input [4]: [division#140, sum#158, count#159L, count#160L]
+Keys [1]: [division#140]
+Functions [2]: [avg(distance_km#141), count(1)]
+Aggregate Attributes [2]: [avg(distance_km#141)#148, count(1)#150L]
+Results [3]: [division#140, round(avg(distance_km#141)#148, 3) AS average_distance#149, count(1)#150L AS ##151L]
+
+(17) Exchange
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: rangepartitioning(##151L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=94]
+
+(18) Sort
+Input [3]: [division#140, average_distance#149, ##151L]
+Arguments: [##151L DESC NULLS LAST], true, 0
+
+(19) AdaptiveSparkPlan
+Output [3]: [division#140, average_distance#149, ##151L]
+Arguments: isFinalPlan=false
+
+
+(division, average_distance, #)
+('HOLLYWOOD', 2.074, 224124)
+('VAN NUYS', 2.939, 208129)
+('SOUTHWEST', 2.191, 189119)
+('WILSHIRE', 2.593, 186383)
+('77TH STREET', 1.717, 170620)
+('NORTH HOLLYWOOD', 2.642, 168096)
+('OLYMPIC', 1.729, 162805)
+('PACIFIC', 3.853, 162027)
+('CENTRAL', 0.993, 154689)
+('RAMPART', 1.534, 153204)
+('SOUTHEAST', 2.444, 143803)
+('WEST VALLEY', 3.022, 136622)
+('FOOTHILL', 4.26, 132482)
+('TOPANGA', 3.297, 131054)
+('HARBOR', 3.702, 127071)
+('HOLLENBECK', 2.677, 116235)
+('WEST LOS ANGELES', 2.79, 115969)
+('NEWTON', 1.635, 111392)
+('NORTHEAST', 3.623, 108243)
+('MISSION', 3.676, 97926)
+('DEVONSHIRE', 2.825, 77180)
+QUERY_ELAPSED_SECONDS=97.399
+Saved to: hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/anastasioskanellos/DFQ4_shuffle_replicate_nl_spark-8653791caae345d98e95ac868a9aecba
+  Elapsed: 97.399s
+  >>> Median: 97.399s
+Q4 shuffle_replicate_nl MEDIAN=97.399
+
+=== Q4 summary (median elapsed per join strategy) ===

@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# Query 1 benchmark: DFQ1 (CSV), DFQ1 (Parquet), DFQ1_udf, RddQ1.
+# Median elapsed per implementation -> logs/q1_results.log.
+# Requires the Parquet dataset to exist (run scripts/run_convert.sh once first).
+#
+# Usage: bash scripts/run_q1.sh [RUNS]   (default: 3)
+#   RUNS — runs per implementation
 
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"

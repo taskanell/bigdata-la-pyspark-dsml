@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# Query 3 benchmark: DFQ3 (DataFrame) and RddQ3 (RDD).
+# Median elapsed per implementation -> logs/q3_results.log.
+#
+# Usage: bash scripts/run_q3.sh [RUNS]   (default: 3)
+#   RUNS — runs per implementation
 
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"

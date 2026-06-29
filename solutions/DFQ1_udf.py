@@ -60,9 +60,11 @@ def main():
     period_udf = udf(classify_period, StringType())
     period_df = street_df.withColumn("day_period", period_udf(col("TIME OCC")))
 
+    period_df.cache()  # cached; reused by both actions below
+
     start = perf_counter()
 
-    total = period_df.count()
+    total = period_df.count()  # 1st action: triggers caching
 
     results = (
         period_df.groupBy("day_period")

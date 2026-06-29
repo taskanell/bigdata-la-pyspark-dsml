@@ -58,11 +58,13 @@ def main():
          .when((time_col >= 2100) | (time_col <= 459), "Night")
     )
 
+    period_df.cache()  # cached; reused by both actions below
+
     start = perf_counter()
 
-    total = period_df.count()
+    total = period_df.count()  # 1st action: triggers caching
 
-    result = (
+    results = (
         period_df.groupBy("day_period")
         .count()
         .withColumn("percentage", round(col("count") / total * 100, 2))
@@ -70,9 +72,9 @@ def main():
         .select("day_period", "percentage")
     )
 
-    result.show()
+    results.show()
 
-    result.coalesce(1).write.mode("overwrite").csv(output_path, header=True)
+    results.coalesce(1).write.mode("overwrite").csv(output_path, header=True)
 
     elapsed = perf_counter() - start
     print(f"QUERY_ELAPSED_SECONDS={elapsed:.3f}")

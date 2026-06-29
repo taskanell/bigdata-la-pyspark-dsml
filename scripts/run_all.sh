@@ -17,15 +17,12 @@ Usage: bash scripts/run_all.sh [RUNS]
   RUNS   runs per configuration/strategy, forwarded to every script (default: 3)
 
 Runs, in order:
+  run_convert.sh    -> logs/convert_results.log (one-time CSV->Parquet, needed by Q1 parquet run)
   run_q1.sh   RUNS  -> logs/q1_results.log  (CSV runs for DFQ1, UDF, RDD, Parquet runs for DFQ1)
   run_q2.sh   RUNS  -> logs/q2_results.log
   run_q3.sh   RUNS  -> logs/q3_results.log
   run_q4.sh   RUNS  -> logs/q4_results.log  (scalability study)
   run_join.sh both RUNS -> logs/q3_join_results.log, logs/q4_join_results.log
-
-Prerequisite: convert CSV to Parquet once before running run_all.sh:
-  spark-submit --conf spark.pyspark.python=python3 \\
-    solutions/convert_to_parquet.py --base-path hdfs://.../user/\$DSML_USER
 
 Each script writes to its own log file; this is just a sequencing wrapper.
 EOF
@@ -39,10 +36,8 @@ fi
 RUNS=${1:-3}
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# "script_name arg1 arg2 ..."
-# Q1 runs twice: once with csv (ζητούμενο 2 API comparison) and once with parquet
-# (ζητούμενο 1 format comparison). Parquet file must exist on HDFS beforehand.
 JOBS=(
+    "run_convert.sh"
     "run_q1.sh $RUNS"
     "run_q2.sh $RUNS"
     "run_q3.sh $RUNS"

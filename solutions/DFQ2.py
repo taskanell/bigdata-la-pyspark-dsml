@@ -56,15 +56,15 @@ def main() -> None:
 
     start = perf_counter()
 
-    result = (
+    results = (
         ranked
         .filter(col("ranking") <= 3)
         .orderBy(col("year").asc(), col("ranking").asc())
         .select("year", "month", "crime_total", "ranking")
     )
 
-    result.show(50) # (16x3) = 48 rows, plus header row
-    result.coalesce(1).write.mode("overwrite").csv(output_path, header=True)
+    results.show(50) # (16x3) = 48 rows, plus header row
+    results.coalesce(1).write.mode("overwrite").csv(output_path, header=True)
 
     elapsed = perf_counter() - start
     print(f"QUERY_ELAPSED_SECONDS={elapsed:.3f}")

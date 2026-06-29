@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# Query 2 benchmark: DFQ2 (DataFrame) and SQLQ2 (SQL).
+# Median elapsed per implementation -> logs/q2_results.log.
+#
+# Usage: bash scripts/run_q2.sh [RUNS]   (default: 3)
+#   RUNS — runs per implementation
 
 BASE_PATH="hdfs://hdfs-namenode.default.svc.cluster.local:9000/user/$DSML_USER"
 NAMESPACE="${DSML_USER}-priv"
